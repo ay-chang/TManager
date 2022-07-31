@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  margin-left: 13.2%;
+  max-width: 65%;
+  padding-top: 2.5rem;
+}
+
+.submission-form {
+  width: 56%;
+  position: absolute;
+  height: 50px;
+  overflow: hidden;
+}
+
+.submission-form input {
+  width: 100%;
+  height: 100%;
+  color: #596f6e;
+  padding-top: 12px;
+  border: none; 
+  outline: none;
+}
+
+.submission-form label {
+  position: absolute;
+  bottom: 1px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.submission-form label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #5fa8d3;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.task-label {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.submission-form input:focus + .submission-label .task-label, .submission-form input:valid + .submission-label .task-label {
+  transform: translateY(-150%);
+  color: #5fa8d3;
+}
+
+.submission-form input:focus + .submission-label::after, .submission-form input:valid .submission-form + .submission-label::after{
+  transform: translateX(0%);
+} 
+
+.title {
+  padding-bottom: 30px;
+}
+
+.todo-list {
+  padding-top: 15%;
+}
+
+.todo {
+  display: flex;
+  list-style-type: none;
+  margin: 3%;
+  width: 121.3%;
+  border-top: 1px solid #cfcfcf;
+  padding: 1rem;
+}
+
+.checkbox  {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
