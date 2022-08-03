@@ -17,19 +17,6 @@ export default function Todo() {
          .catch((err) => console.error("Error: ", err));
    };
 
-   // const completeTodo = async (id) => {
-   //    const data = await fetch(api_base + "/todo/complete/" + id).then((res) => res.json());
-
-   //    setTodos((todos) =>
-   //       todos.map((todo) => {
-   //          if (todo._id === data._id) {
-   //             todo.complete = data.complete;
-   //          }
-   //          return todo;
-   //       })
-   //    );
-   // };
-
    const addTodo = async (e) => {
       e.preventDefault();
       const data = await fetch(api_base + "/todo/new", {
@@ -54,8 +41,21 @@ export default function Todo() {
       setTodos((todos) => todos.filter((todo) => todo._id !== data.result._id));
    };
 
+   // const completeTodo = async (id) => {
+   //    const data = await fetch(api_base + "/todo/complete/" + id).then((res) => res.json());
+
+   //    setTodos((todos) =>
+   //       todos.map((todo) => {
+   //          if (todo._id === data._id) {
+   //             todo.complete = data.complete;
+   //          }
+   //          return todo;
+   //       })
+   //    );
+   // };
+
    return (
-      <div className="App">
+      <div className="Todo">
          <h3 className="title">Get Stuff Done</h3>
 
          <form className="submission-form" onSubmit={addTodo}>

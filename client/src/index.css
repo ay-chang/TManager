@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(253, 253, 253);
+  /* background-color: white; */
+  /* background-image: linear-gradient(120deg, #d0dae0 0%, #e2ebf0 100%); */
 }
 
 code {
@@ -12,20 +15,21 @@ code {
     monospace;
 }
 
-.App {
-  margin-left: 13.2%;
-  max-width: 65%;
+.Todo {
+  margin-left: 21%;
+  max-width: 45%;
   padding-top: 2.5rem;
 }
 
 .submission-form {
-  width: 56%;
+  width: 58%;
   position: absolute;
   height: 50px;
   overflow: hidden;
 }
 
 .submission-form input {
+  font-size: 15px;
   width: 100%;
   height: 100%;
   color: #596f6e;
@@ -35,6 +39,7 @@ code {
 }
 
 .submission-form label {
+  font-size: 16px;
   position: absolute;
   bottom: 1px;
   left: 0%;
@@ -47,7 +52,7 @@ code {
 .submission-form label::after {
   content: "";
   position: absolute;
-  left: 0px;
+  left: -1px;
   bottom: -1px;
   height: 100%;
   width: 100%;
@@ -84,9 +89,9 @@ code {
   display: flex;
   list-style-type: none;
   margin: 3%;
-  width: 121.3%;
+  width: 121.8%;
   border-top: 1px solid #cfcfcf;
-  padding: 1rem;
+  padding-top: 1.5rem;
 }
 
 .checkbox  {
@@ -100,4 +105,73 @@ code {
   -webkit-appearance: none;
   outline: none;
   cursor: pointer;
+}
+
+.checkbox:hover {
+  background-color: rgb(237, 237, 237);
+}
+
+.nav-bar {
+  /* background-color: white; */
+  /* border-bottom: .001px solid rgb(188, 188, 188); */
+  height: .5rem;
+  font-size: 16px;
+}
+
+.logo {
+  height: 30px;
+  cursor: pointer;
+  margin-right: -20px;
+}
+
+li, a, button {
+  color: rgb(67, 67, 67);
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2% 10%;
+}
+
+.nav-left {
+  margin-right: auto;
+}
+
+.nav-right {
+  display: flex;
+}
+
+.nav--links {
+  list-style: none;
+}
+
+.nav--links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav--links li a {
+  transition: all 0.3s ease;
+}
+
+.nav--links li a:hover {
+  color: #5fa8d3;
+}
+
+button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #5fa8d3;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #5ab1e3;
 }
