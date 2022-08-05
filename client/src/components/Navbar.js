@@ -1,6 +1,7 @@
 import React from "react";
 
 import logo from "../images/logo.png";
+import "../css/navbar.css";
 
 export default function Navbar() {
    return (
@@ -15,14 +16,14 @@ export default function Navbar() {
                   <a href="http://localhost:3001/about">About</a>
                </li>
                <li>
-                  <a href="#">Contact</a>
+                  <a href="http://localhost:3001/about">Contact</a>
                </li>
             </ul>
          </nav>
          <nav className="nav-right">
             <ul className="nav--links">
                <li>
-                  <a href="#">Login</a>
+                  <a href="http://localhost:3001/about">Login</a>
                </li>
             </ul>
             <button>Sign Up</button>
